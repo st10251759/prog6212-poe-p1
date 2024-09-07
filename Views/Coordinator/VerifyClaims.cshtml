@@ -1,0 +1,254 @@
+﻿@{
+    ViewBag.Title = "Verify Claims";
+}
+
+<body>
+    <div class="container-claims">
+        <h2>View Claims</h2>
+
+        <div class="filters">
+            <select id="status-filter">
+                <option value="">Select Status</option>
+                <option value="pending">Pending</option>
+                <option value="approved">Approved</option>
+                <option value="rejected">Rejected</option>
+            </select>
+            <button onclick="applyFilters()">Apply Filters</button>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Claim ID</th>
+                    <th>Lecturer Name</th>
+                    <th>Hours Worked</th>
+                    <th>Total Amount</th>
+                    <th>Supporting Documents</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1001</td>
+                    <td>Cameron</td>
+                    <td>12.4</td>
+                    <td>R12000.00</td>
+                    <td><a href="#">View Document</a></td>
+                    <td>Pending</td>
+                    <td>
+                        <button class="btn-approve"><i class="fa-solid fa-pen-to-square"></i> Approve</button>
+                        <button class="btn-reject"><i class="fa-solid fa-circle-xmark"></i> Reject</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1002</td>
+                    <td>Alysia</td>
+                    <td>15.0</td>
+                    <td>R16000.00</td>
+                    <td><a href="#">View Document</a></td>
+                    <td>Approved</td>
+                    <td>
+                        Reviewed
+                    </td>
+                </tr>
+                <tr>
+                    <td>1003</td>
+                    <td>Theshara</td>
+                    <td>12.4</td>
+                    <td>R12000.00</td>
+                    <td><a href="#">View Document</a></td>
+                    <td>Pending</td>
+                    <td>
+                        <button class="btn-approve"><i class="fa-solid fa-pen-to-square"></i> Approve</button>
+                        <button class="btn-reject"><i class="fa-solid fa-circle-xmark"></i> Reject</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1004</td>
+                    <td>John</td>
+                    <td>12.4</td>
+                    <td>R12000.00</td>
+                    <td><a href="#">View Document</a></td>
+                    <td>Approved</td>
+                    <td>
+                        Reviewed
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>1005</td>
+                    <td>Cameron</td>
+                    <td>12.4</td>
+                    <td>R12000.00</td>
+                    <td><a href="#">View Document</a></td>
+                    <td>Pending</td>
+                    <td>
+                        <button class="btn-approve"><i class="fa-solid fa-pen-to-square"></i> Approve</button>
+                        <button class="btn-reject"><i class="fa-solid fa-circle-xmark"></i> Reject</button>
+                    </td>
+                </tr>
+                <!-- Additional rows go here -->
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">Next</a>
+        </div>
+    </div>
+
+    <script>
+        function applyFilters() {
+            // Implement filtering logic here
+            alert('Filters applied!');
+        }
+    </script>
+</body>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #03041c;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container-claims {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #03041c;
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .filters {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        .filters select, .filters button {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        .filters button {
+            background-color: #03041c;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+            .filters button:hover {
+                background-color: #03041c;
+            }
+
+    .table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+        .table th, .table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+            color: #333;
+        }
+
+        .table th {
+            background-color: #f2f2f2;
+            color: #03041c;
+            font-weight: bold;
+        }
+
+        .table td {
+            background-color: #ffffff;
+        }
+
+        .table a {
+            color: #03041c;
+            text-decoration: underline;
+        }
+
+            .table a:hover {
+                color: #03041c;
+            }
+
+    .btn-approve, .btn-reject {
+        padding: 8px 12px;
+        font-size: 14px;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        color: #ffffff;
+        text-align: center;
+        width: 100px;
+
+    }
+
+    .btn-approve {
+        background-color: #28a745;
+    }
+
+    .btn-reject {
+        background-color: #dc3545;
+    }
+
+    .btn-approve:hover {
+        background-color: #218838;
+    }
+
+    .btn-reject:hover {
+        background-color: #c82333;
+    }
+
+    .pagination {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .pagination a {
+            padding: 10px 15px;
+            margin: 0 5px;
+            font-size: 16px;
+            color: #03041c;
+            text-decoration: none;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+            .pagination a:hover {
+                background-color: #e9ecef;
+            }
+
+        .pagination .active {
+            background-color: #03041c;
+            color: #ffffff;
+            border-color: #03041c;
+        }
+
+</style>

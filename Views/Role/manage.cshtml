@@ -1,0 +1,122 @@
+﻿<body>
+    <div class="container-claims">
+        <h2>Edit Role</h2>
+        <form action="#" method="post" class="form-edit-role">
+            <div class="form-group">
+                <label for="roleName">Role Name</label>
+                <input type="text" id="roleName" name="roleName" value="Admin" required>
+            </div>
+            <div class="form-group">
+                <label for="roleDescription">Description</label>
+                <textarea id="roleDescription" name="roleDescription" rows="4" required>Administrator with full access</textarea>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success">Save Changes</button>
+                <a href="role-management.html" class="btn btn-primary">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+ </body>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #03041c;
+            color: #03041c;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container-claims {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #03041c;
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .form-edit-role {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+            .form-group label {
+                display: block;
+                font-size: 16px;
+                font-weight: bold;
+                color: #03041c;
+                margin-bottom: 8px;
+            }
+
+            .form-group input, .form-group textarea {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            .form-group textarea {
+                resize: vertical;
+            }
+
+        .form-actions {
+            text-align: center;
+        }
+
+        .btn-claims, .btn-primary, .btn-success, .btn-danger {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            text-decoration: none;
+            text-align: center;
+            margin: 0 10px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            color: #ffffff;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+
+
+</style>

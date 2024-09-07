@@ -1,0 +1,136 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container">
+    <h1 style="color: #fff;">Register</h1>
+    <div class="row">
+        <div class="col-md-9 offset-md-2">
+            <section class="section">
+                <form id="registerForm" method="post">
+                    <h2>Create a new account.</h2>
+                    <hr />
+                    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" autocomplete="given-name" aria-required="true" placeholder="First name" />
+                        <label>First Name</label>
+                        <spanclass ="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" autocomplete="family-name" aria-required="true" placeholder="Last name" />
+                        <label>Last Name</label>
+                        <span class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                        <label>Email</label>
+                        <span class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                        <label>Password</label>
+                        <span class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" autocomplete="new-password" aria-required="true" placeholder="Confirm password" />
+                        <label>Confirm Password</label>
+                        <span class="text-danger"></span>
+                    </div>
+
+                    <button id="registerSubmit" type="submit" class="btn btn-reg">Register</button>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<style>
+    /* General styling for the page */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #03041c;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1, h2 {
+        text-align: center;
+        color: #343a40;
+    }
+
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    /* Styling for the form */
+    form {
+        background-color: #ffffff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-floating {
+        margin-bottom: 1rem;
+    }
+
+        .form-floating label {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+    .form-control, .form-select {
+        border: 1px solid #ced4da;
+        padding: 1rem;
+        border-radius: 4px;
+    }
+
+    .text-danger {
+        font-size: 0.9rem;
+    }
+
+    /* Styling for buttons */
+    .btn-reg {
+        background-color: #03041c;
+        border-color: #03041c;
+        padding: 0.75rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        width: 100%;
+        color: #fff;
+    }
+
+        .btn-reg:hover {
+            background-color: #fff;
+            border-color: #03041c;
+            color: #000
+        }
+
+    /* Links */
+    a {
+        color: #03041c;
+    }
+
+        a:hover {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+    /* Additional styling for sections and layout */
+    .section {
+        margin-bottom: 2rem;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid #dee2e6;
+        margin: 1.5rem 0;
+    }
+
+</style>

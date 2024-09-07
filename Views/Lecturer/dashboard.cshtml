@@ -1,0 +1,206 @@
+﻿<body>
+    <div class="container-dashboard">
+        <h2>Lecturer Dashboard</h2>
+
+        <!-- Date Filter Section -->
+        <div class="filter-section">
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" name="start-date">
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" name="end-date">
+            <button class="btn-filter">Filter</button>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Claim ID</th>
+                    <th>Date Submitted</th>
+                    <th>Hours Worked</th>
+                    <th>Hourly Rate</th>
+                    <th>Total Amount</th>
+                    <th>Supporting Document</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1001</td>
+                    <td>2024-03-15</td>
+                    <td>10</td>
+                    <td>R100</td>
+                    <td>R1000.00</td>
+                    <td><i class="fa-solid fa-download"></i><a href="document1.pdf" target="_blank">View Document</a></td>
+                    <td>Pending</td>
+                </tr>
+                <tr>
+                    <td>1002</td>
+                    <td>2024-04-20</td>
+                    <td>10</td>
+                    <td>R100</td>
+                    <td>R1000.00</td>
+                    <td><i class="fa-solid fa-download"></i><a href="document2.pdf" target="_blank">View Document</a></td>
+                    <td>Approved</td>
+                </tr>
+                <tr>
+                    <td>1003</td>
+                    <td>2024-05-20</td>
+                    <td>10</td>
+                    <td>R100</td>
+                    <td>R1000.00</td>
+                    <td><i class="fa-solid fa-download"></i><a href="document2.pdf" target="_blank">View Document</a></td>
+                    <td>Approved</td>
+                </tr>
+                <tr>
+                    <td>1004</td>
+                    <td>2024-08-10</td>
+                    <td>10</td>
+                    <td>R100</td>
+                    <td>R1000.00</td>
+                    <td><i class="fa-solid fa-download"></i><a href="document2.pdf" target="_blank">View Document</a></td>
+                    <td>Pending</td>
+                </tr>
+                <tr>
+                    <td>1005</td>
+                    <td>2024-08-20</td>
+                    <td>10</td>
+                    <td>R100</td>
+                    <td>R1000.00</td>
+                    <td><i class="fa-solid fa-download"></i><a href="document2.pdf" target="_blank">View Document</a></td>
+                    <td>Pending</td>
+                </tr>
+               
+                <!-- Additional rows go here -->
+            </tbody>
+        </table>
+        <a href="/SubmitClaim" class="btn-submit"><i class="fa-solid fa-upload"></i> Submit New Claim</a>
+    </div>
+</body>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #03041c;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container-dashboard {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #03041c;
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .filter-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+        .filter-section label {
+            margin: 0 10px;
+            color: #03041c;
+        }
+
+        .filter-section input[type="date"] {
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+    .btn-filter {
+        margin-left: 10px;
+        padding: 6px 12px;
+        background-color: #03041c;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+        .btn-filter:hover {
+            background-color: #121325;
+        }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+        .table th, .table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+            color: #03041c;
+        }
+
+        .table th {
+            background-color: #f2f2f2;
+            color: #03041c;
+            font-weight: bold;
+        }
+
+        .table td {
+            background-color: #ffffff;
+        }
+
+        .table a {
+            color: #03041c;
+            
+        }
+
+            .table a:hover {
+                color: #03041c;
+            }
+
+    .btn-submit {
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        text-align: center;
+        color: #ffffff;
+        background-color: #03041c;
+    }
+
+        .btn-submit:hover {
+            background-color: #fff;
+            color: #03041c;
+            border: 1px solid #03041c;
+        }
+
+    .back-link {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        font-size: 16px;
+        text-align: center;
+        color: #03041c;
+        text-decoration: none;
+    }
+
+        .back-link:hover {
+            color: red;
+        }
+</style>

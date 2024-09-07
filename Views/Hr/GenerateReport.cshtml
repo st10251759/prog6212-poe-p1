@@ -1,0 +1,186 @@
+﻿<body>
+    <div class="container-report">
+        <h1>Generate and View Reports</h1>
+
+        <div class="form-report">
+            <label for="report-type">Select Report Type</label>
+            <select id="report-type" name="report-type">
+                <option value="claims">Claims Report</option>
+                <option value="payments">Payments Report</option>
+            </select>
+
+            <label for="start-date">Start Date</label>
+            <input type="date" id="start-date" name="start-date">
+
+            <label for="end-date">End Date</label>
+            <input type="date" id="end-date" name="end-date">
+
+            <label for="report-name">Report Name</label>
+            <input type="text" id="report-name" name="report-name" placeholder="Enter report name">
+
+            <button type="button" style="background-color: #03041c;">Generate Report</button>
+        </div>
+
+        <div class="report-list">
+            <h2>Generated Reports</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Report ID</th>
+                        <th>Report Name</th>
+                        <th>Type</th>
+                        <th>Date Created</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Report Row -->
+                    <tr>
+                        <td>R001</td>
+                        <td>Q2 Claims Report</td>
+                        <td>Claims</td>
+                        <td>2024-07-15</td>
+                        <td>
+                            <a href="#">View Report</a>
+                            <a href="#" style="margin-left: 10px;">Download</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>R002</td>
+                        <td>Q2 Payments Report</td>
+                        <td>Payments</td>
+                        <td>2024-07-20</td>
+                        <td>
+                            <a href="#">View Report</a>
+                            <a href="#" style="margin-left: 10px;">Download</a>
+                        </td>
+                    </tr>
+                    <!-- Additional rows go here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="report-details">
+            <h2>Report Details</h2>
+            <p><strong>Report ID:</strong> R001</p>
+            <p><strong>Report Name:</strong> Q2 Claims Report</p>
+            <p><strong>Type:</strong> Claims</p>
+            <p><strong>Date Created:</strong> 2024-07-15</p>
+            <p><strong>Description:</strong> This report includes all claims submitted during Q2, including details on status, amount, and associated lecturer.</p>
+        </div>
+    </div>
+</body>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #03041c;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container-report {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #03041c;
+        margin-bottom: 30px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .form-report {
+        margin-bottom: 30px;
+    }
+
+        .form-report label {
+            font-size: 16px;
+            color: #03041c;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-report select, .form-report input[type="date"], .form-report input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .form-report button {
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            color: #ffffff;
+            background-color: #007bff;
+        }
+
+            .form-report button:hover {
+                background-color: #0056b3;
+            }
+
+    .report-list {
+        margin-top: 20px;
+    }
+
+        .report-list table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .report-list th, .report-list td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+            color: #03041c;
+        }
+
+        .report-list th {
+            background-color: #f2f2f2;
+            color: #03041c;
+            font-weight: bold;
+        }
+
+        .report-list td {
+            background-color: #ffffff;
+        }
+
+        .report-list a {
+            color: #03041c;
+            text-decoration: underline;
+        }
+
+            .report-list a:hover {
+                color: #03041c;
+            }
+
+    .report-details {
+        margin-top: 30px;
+    }
+
+        .report-details h2 {
+            font-size: 22px;
+            color: #03041c;
+            margin-bottom: 15px;
+        }
+
+        .report-details p {
+            font-size: 16px;
+            color: #666;
+        }
+</style>

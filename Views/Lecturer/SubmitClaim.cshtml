@@ -1,0 +1,117 @@
+﻿@{
+    ViewBag.Title = "Submit Claim";
+}
+
+<div class="container-claims">
+    <h2>Submit Your Claim</h2>
+    <form action="/Lecturer/SubmitClaim" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="hoursWorked">Hours Worked:</label>
+            <input type="number" id="hoursWorked" name="HoursWorked" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="hourlyRate">Hourly Rate:</label>
+            <input type="number" id="hourlyRate" name="HourlyRate" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="supportingDocs">Upload Supporting Documents:</label>
+            <input type="file" id="supportingDocs" name="SupportingDocuments" class="form-control-file" required>
+        </div>
+        <button type="submit" class="btn-claims btn-primary"><i class="fa-solid fa-upload"></i> Submit Claim</button>
+    </form>
+</div>
+
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #03041c;
+    color: #03041c;
+    margin: 0;
+    padding: 0;
+}
+
+.container-claims {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: #03041c;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #03041c;
+}
+
+.form-control, .form-control-file {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-control:focus, .form-control-file:focus {
+    border-color: #03041c;
+    outline: none;
+}
+
+    .btn-claims {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #03041c;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #02031a;
+}
+
+    .btn-submit {
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        text-align: center;
+        color: #ffffff;
+        background-color: #03041c;
+    }
+
+        .btn-submit:hover {
+            background-color: #fff;
+            color: #03041c;
+            border: 1px solid #03041c;
+        }
+
+
+</style>

@@ -1,0 +1,204 @@
+﻿@{
+    ViewBag.Title = "Track Claim Status";
+}
+
+
+<div class="container-claims">
+    <h2 style="color: #03041c;">Track Your Claim Status</h2>
+
+    <!-- Status Summary Section -->
+    <div class="status-summary">
+        <div class="status-item approved">
+            Approved Claims: <span id="approved-count">1</span>
+        </div>
+        <div class="status-item rejected">
+            Rejected Claims: <span id="rejected-count">0</span>
+        </div>
+        <div class="status-item pending">
+            Pending Claims: <span id="pending-count">0</span>
+        </div>
+    </div>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <label for="status-filter">Filter by Status:</label>
+        <select id="status-filter" class="status-filter" onchange="filterClaims()">
+            <option value="All">All</option>
+            <option value="Approved">Approved</option>
+            <option value="Rejected">Rejected</option>
+            <option value="Pending">Pending</option>
+        </select>
+    </div>
+
+    <!-- Claims Table -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Claim ID</th>
+                <th>Submission Date</th>
+                <th>Status</th>
+                <th>Remarks</th>
+            </tr>
+        </thead>
+        <tbody id="claims-table-body">
+            <tr data-status="Approved">
+                <td>1001</td>
+                <td>2024/09/01</td>
+                <td>Approved</td>
+                <td>Test</td>
+            </tr>
+            <tr data-status="Pending">
+                <td>1002</td>
+                <td>2024/09/02</td>
+                <td>Pending</td>
+                <td>Under Review</td>
+            </tr>
+            <tr data-status="Rejected">
+                <td>1003</td>
+                <td>2024/09/03</td>
+                <td>Rejected</td>
+                <td>Insufficient Information</td>
+            </tr>
+            <!-- Additional rows go here -->
+        </tbody>
+    </table>
+
+    <a href="/" class="btn-submit"><i class="fa-solid fa-house"></i> Back to Dashboard</a>
+</div>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #03041c;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container-claims {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #03041c;
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .status-summary {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+
+    .status-item {
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 4px;
+        text-align: center;
+        width: 30%;
+    }
+
+    .approved {
+        background-color: #d4edda;
+        color: #155724;
+    }
+
+    .rejected {
+        background-color: #f8d7da;
+        color: #721c24;
+    }
+
+    .pending {
+        background-color: #fff3cd;
+        color: #856404;
+    }
+
+    .filter-section {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .status-filter {
+        padding: 8px;
+        font-size: 16px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+    }
+
+    .table {
+        width: 100%;
+        margin-bottom: 20px;
+        border-collapse: collapse;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+        .table th, .table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+            color: #333;
+        }
+
+        .table th {
+            background-color: #f2f2f2;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .table td {
+            background-color: #ffffff;
+        }
+
+        .table a {
+            color: #03041c;
+            text-decoration: underline;
+        }
+
+            .table a:hover {
+                color: #0056b3;
+            }
+
+    .back-link {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        font-size: 16px;
+        text-align: center;
+        color: #03041c;
+        text-decoration: none;
+    }
+
+        .back-link:hover {
+            color: red;
+        }
+
+    .btn-submit {
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        text-align: center;
+        color: #ffffff;
+        background-color: #03041c;
+    }
+
+        .btn-submit:hover {
+            background-color: #fff;
+            color: #03041c;
+            border: 1px solid #03041c;
+        }
+</style>

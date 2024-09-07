@@ -1,0 +1,147 @@
+﻿<body>
+    <div class="container-dashboard">
+        <h1>HR Dashboard</h1>
+
+        <div class="dashboard-section">
+            <div class="dashboard-card">
+                <h2>Claims Processed</h2>
+                <div class="card-content">
+                    <div class="card-item">
+                        <h3>150</h3>
+                        <p>Total Claims</p>
+                    </div>
+                    <div class="card-item">
+                        <h3>20</h3>
+                        <p>Pending Review</p>
+                    </div>
+                    <div class="card-item">
+                        <h3>130</h3>
+                        <p>Approved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <div class="dashboard-card">
+                <h2>Payments Overview</h2>
+                <div class="card-content">
+                    <div class="card-item">
+                        <h3>R500,000</h3>
+                        <p>Total Payments</p>
+                    </div>
+                    <div class="card-item">
+                        <h3>R50,000</h3>
+                        <p>Pending Payments</p>
+                    </div>
+                    <div class="card-item">
+                        <h3>R450,000</h3>
+                        <p>Completed Payments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <div class="dashboard-card">
+                <h2>Reports</h2>
+                <p>Generate detailed reports on claims and payments.</p>
+                <a href="#" class="btn-reports">View Reports</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #03041c;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container-dashboard {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #03041c;
+        margin-bottom: 30px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .dashboard-section {
+        margin-bottom: 20px;
+    }
+
+    .dashboard-card {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+        .dashboard-card h2 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #03041c;
+        }
+
+        .dashboard-card p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .dashboard-card .card-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .dashboard-card .card-content div {
+                text-align: center;
+            }
+
+            .dashboard-card .card-content .card-item {
+                margin: 10px 0;
+            }
+
+                .dashboard-card .card-content .card-item h3 {
+                    font-size: 24px;
+                    color: #03041c;
+                }
+
+                .dashboard-card .card-content .card-item p {
+                    font-size: 18px;
+                    color: #666;
+                }
+
+        .dashboard-card .btn-reports {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #03041c;
+            border: none;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+            .dashboard-card .btn-reports:hover {
+                background-color: #03041c;
+            }
+</style>
